@@ -1,0 +1,14 @@
+html{
+	font-family: Helvetica;
+}
+
+img{
+	display: inline;
+}
+
+#reset{
+	background-color: silver;
+	position: absolute;
+	top: 400px;
+	left: 100px;
+}

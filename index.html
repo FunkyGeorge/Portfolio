@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>George's Portfolio</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+	<!-- jquery ui -->
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.pjlink').parent().css('padding','20px');
+
+			$('.pjlink').hover(function(){
+				$(this).children().css('height','250px');
+				$(this).children().css('width','240px');
+				$(this).parent().css('padding','0');
+			},function(){
+				$(this).children().css('height','210px');
+				$(this).children().css('width','200px');
+				$(this).parent().css('padding','20px');
+			});
+
+			$('.project').click(function(e){
+				e.preventDefault();
+				var goTo = $(this).parent().attr("href");
+				$(this).css('z-index','1');
+				$(this).effect('puff');
+				setTimeout( function(){window.location = goTo}, 350);
+			});
+
+			$('.category').click(function(){
+				$('.blah').css('dispay','none');
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="header">
+			<p><span class="badge">GM</span></p>
+			<h1>George Miranda</h1>
+			<h2 id="title">Front-End Developer</h2>
+		</div>
+
+		<h2 class="category">HTML/CSS Themes</h2>
+		<div class="row">
+			<div class="col-md-4">
+				<a href="Assets/FreeBSD.html/FreeBSD.html" class="pjlink"><img src="assets/BSD.png" alt="OOPS!" class="img-circle project"></a>
+			</div>
+			<div class="col-md-4">
+				<a href="Assets/PPC Lubricants/PPClubricants.html" class="pjlink"><img src="assets/PPC.png" alt="OOPS!" class="img-circle project"></a>
+			</div>
+			<div class="col-md-4">
+				<a href="Assets/Periodic Table/ptable.html" class="pjlink"><img src="assets/Periodic.png" alt="OOPS!" class="img-circle project"></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-md-offset-2">
+				<a href="Assets/WordStream/wordstream.html" class="pjlink"><img src="assets/WordStream demo.png" alt="OOPS!" class="img-circle project"></a>
+			</div>
+			<div class="col-md-3 col-md-offset-1">
+				<a href="Assets/HTML yellowbelt/modernize.html" class="pjlink"><img src="assets/modernize.png" alt="OOPS!" class="img-circle project"></a>
+			</div>
+		</div>
+		
+		<h2 class="category">JQuery</h2>
+		<div class="row">
+			<div class="col-md-4">
+				<a href="Assets/Pacman/Single Player/index.html" class="pjlink"><img src="assets/Pacman.png" alt="OOPS!" class="img-circle project"></a>
+			</div>
+			<div class="col-md-4">
+				<a href="Assets/Dninja/DNinja.html" class="pjlink"><img src="assets/Dninja.png" alt="OOPS!" class="img-circle project"></a>
+			</div>
+			<div class="col-md-4">
+				<a href="Assets/JQuery Form/addUser.html" class="pjlink"><img src="assets/UserForm.png" alt="OOPS!" class="img-circle project"></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<a href="Assets/Color Clicker/colorClicker.html" class="pjlink"><img src="assets/colorClick.png" alt="OOPS!" class="img-circle project"></a>
+			</div>
+			<div class="col-md-4">
+				<a href="Assets/Contact Card/ContactCard.html" class="pjlink"><img src="assets/ContactCard.png" alt="OOPS!" class="img-circle project"></a>
+			</div>
+			<div class="col-md-4">
+				<a href="Assets/NinjaToCat/NinjaToCat.html" class="pjlink"><img src="assets/change.png" alt="OOPS!" class="img-circle project"></a>
+			</div>
+		</div>
+
+		<div class="footer">
+		<ul>
+			<h3>Check Me Out At</h3>
+			<li class="link"><a href="http://stackoverflow.com/users/5701182/george-miranda"><img src="http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png">Stack Overflow</a></li>
+			<li class="link"><a href="https://www.linkedin.com/in/george-miranda-462a47114">
+			<img src="http://icons.iconarchive.com/icons/limav/flat-gradient-social/512/Linkedin-icon.png">LinkedIn</a></li>
+			<li class="link"><a href="https://github.com/FunkyGeorge"><img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png">GitHub</a></li>
+			<li class="link"><a href="AboutMe.html"><img src="Assets/AboutMe.png" >About Me</a></li>
+		</ul>
+	</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

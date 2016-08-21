@@ -1,0 +1,126 @@
+html{
+	font-family: Tahoma;
+	width: 970px
+}
+
+a{
+	color: #99003C;
+}
+
+h2{
+	color: #990000;
+	font-family: Tahoma;
+	font-size: 14px;
+}
+
+p{
+	font-size: 13px;
+	font-family: Tahoma;
+}
+
+li{
+	font-size: 12px;
+}
+
+.banner{
+	background-color: #850000;
+	padding: 0 20px;
+}
+
+.banner h1{
+	color: white;
+	display: inline;
+	position: relative;
+	bottom: 20px;
+	font-size: 25px;
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+.search{
+	display: inline-block;
+	position: relative;
+	top: -10px;
+	left: 50px;
+}
+
+.banner li{
+	display: inline-block;
+	padding: 5px;
+	border-right: 2px solid white;
+}
+
+.banner a{
+	color: #FCAC3D;
+}
+
+form{
+	position: relative;
+	top: -10px;
+	left: 120px;
+}
+
+.menu{
+	background-color: silver;
+	margin: -20px 0;
+}
+
+.menu ul{
+	padding: 5px 20px;
+}
+
+.menu li{
+	display: inline;
+	font-size: 15px;
+	color: grey;
+	padding: 0 20px;
+	border-right: 2px solid grey;
+}
+
+.tools{
+	background-color: #EEEEEE;
+	display: inline-block;
+	margin: 20px;
+	vertical-align: top;
+	font-family: Tahoma;
+	font-size: 14px;
+}
+
+.content{
+	display: inline-block;
+	max-width: 700px;
+}
+
+.content h1{
+	color: #990000;
+	font-family: Tahoma;
+	font-size: 18px;
+}	
+
+#first{
+	border: none;
+}
+
+#last{
+	border: none;
+}
+
+#lastli{
+	border:none;
+}
+
+#button{
+	color: white;
+	background-color: #790000;
+	border-radius: 0;
+	border: 2px solid white;
+}
+
+
+
+
+
+
+
+
+
+
