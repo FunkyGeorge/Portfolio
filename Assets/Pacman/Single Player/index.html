@@ -14,6 +14,7 @@
 <h1 id="message">GAME OVER!</h1>
 
 	<script type="text/javascript">
+		var playing = true;
 		var output = "";
 		var score = 0;
 
@@ -34,7 +35,8 @@
 
 		var pacman = {
 			x: 1,
-			y: 1
+			y: 1,
+			dir: "right"
 		};
 
 		var blinky = {
@@ -159,6 +161,7 @@
 			if(blinky.x == pacman.x && blinky.y == pacman.y)
 			{
 				document.getElementById('message').style.display = "inline";
+				playing = false;
 			}
 		}
 		
@@ -240,6 +243,7 @@
 			if(clyde.x == pacman.x && clyde.y == pacman.y)
 			{
 				document.getElementById('message').style.display = "inline";
+				playing = false;
 			}
 		}
 		
@@ -287,44 +291,70 @@
 			// pacmanz
 				if( arg.keyCode == 38 && world[pacman.y-1][pacman.x] != 2)
 				{
-					pacman.y--;
-					document.getElementById('pacman').style.top = pacman.y*20 + "px";
-					update();
-					document.getElementById('pacman').style.transform = "rotate(-90deg)";
-					blinkyAI();
-					clydeAI();
+					pacman.dir = "down";
+					// blinkyAI();
+					// clydeAI();
 				}
 				if( arg.keyCode == 40 && world[pacman.y + 1][pacman.x] != 2)
 				{
-					pacman.y++;
-					document.getElementById('pacman').style.top = pacman.y*20 + "px";
-					update();
-					document.getElementById('pacman').style.transform = "rotate(90deg)";
-					blinkyAI();
-					clydeAI();
+					pacman.dir = "up";
+					// blinkyAI();
+					// clydeAI();
 				}
 				if( arg.keyCode == 37 && world[pacman.y][pacman.x-1] != 2)
 				{
-					pacman.x--;
-					document.getElementById('pacman').style.left = pacman.x*20 + "px";
-					update();
-					document.getElementById('pacman').style.transform = "rotate(180deg)";
-					blinkyAI();
-					clydeAI();
+					pacman.dir = "left";
+					// blinkyAI();
+					// clydeAI();
 				}
 				if( arg.keyCode == 39 && world[pacman.y][pacman.x+1] != 2)
+				{
+					pacman.dir = "right";
+					// blinkyAI();
+					// clydeAI();
+				}
+				// end pacmanz
+			};
+
+			function move(){
+				if (pacman.dir == "right" && world[pacman.y][pacman.x+1] != 2)
 				{
 					pacman.x++;
 					document.getElementById('pacman').style.left = pacman.x*20 + "px";
 					update();
 					document.getElementById('pacman').style.transform = "rotate(0)";
+				}
+				else if (pacman.dir == "left" && world[pacman.y][pacman.x-1] != 2)
+				{
+					pacman.x--;
+					document.getElementById('pacman').style.left = pacman.x*20 + "px";
+					update();
+					document.getElementById('pacman').style.transform = "rotate(180deg)";
+				}
+				else if (pacman.dir == "up" && world[pacman.y + 1][pacman.x] != 2)
+				{
+					pacman.y++;
+					document.getElementById('pacman').style.top = pacman.y*20 + "px";
+					update();
+					document.getElementById('pacman').style.transform = "rotate(90deg)";
+				}
+				else if (pacman.dir == "down" && world[pacman.y-1][pacman.x] != 2)
+				{
+					pacman.y--;
+					document.getElementById('pacman').style.top = pacman.y*20 + "px";
+					update();
+					document.getElementById('pacman').style.transform = "rotate(-90deg)";
+				}
+			};
+
+			setInterval(function(){
+				if (playing){
+					move();
 					blinkyAI();
 					clydeAI();
 				}
-				// end pacmanz
-
 				
-			};
+			}, 250);
 	</script>
 </body>
 </html>
