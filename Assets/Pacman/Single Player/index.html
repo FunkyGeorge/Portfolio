@@ -14,9 +14,10 @@
 <h1 id="message">GAME OVER!</h1>
 
 	<script type="text/javascript">
-		var playing = true;
+		var playing = false;
 		var output = "";
 		var score = 0;
+		var winningScore = 1370;
 
 		var world = [
 			[2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
@@ -254,16 +255,25 @@
 			for(var c = 0; c < world[i].length;c++){
 				if(world[i][c] == 2)
 					output += '<div class="brick"></div>';
-				else if(world[i][c] == 1)
+				else if(world[i][c] == 1){
 					output +='<div class="coin"></div>';
+					if (!playing){
+						winningScore += 10
+					}
+				}
 				else if(world[i][c] == 0)
 					output += '<div class="empty"></div>';
 				else if(world[i][c] == 4)
 					output += '<div class="pacman"></div>';
-				else if(world[i][c] == 5)
+				else if(world[i][c] == 5){
 					output+= '<div class="cherry"></div>';
+					if (!playing){
+						winningScore += 50
+					}
+				}
 			}
 			output = output + '\n</div>';
+			playing = true;
 		}
 		document.getElementById('world').innerHTML = output;
 		}
@@ -348,6 +358,13 @@
 			};
 
 			setInterval(function(){
+				if (score >= winningScore){
+					playing = false;
+					document.getElementById('message').style.innerHTML = "Winner!";
+					document.getElementById('message').style.display = "inline";
+
+				}
+
 				if (playing){
 					move();
 					blinkyAI();
