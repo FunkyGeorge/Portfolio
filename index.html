@@ -1,134 +1,158 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+	<meta charset="UTF-8">
 	<title>George's Portfolio</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-
-	<!-- jQuery -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
-
-	<!-- jquery ui -->
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('.pjlink').parent().css('padding','20px');
-
-			$('.pjlink').hover(function(){
-				$(this).children().css('height','250px');
-				$(this).children().css('width','240px');
-				$(this).parent().css('padding','0');
-			},function(){
-				$(this).children().css('height','210px');
-				$(this).children().css('width','200px');
-				$(this).parent().css('padding','20px');
-			});
-
-			$('.project').click(function(e){
-				e.preventDefault();
-				var goTo = $(this).parent().attr("href");
-				$(this).css('z-index','1');
-				$(this).effect('puff');
-				setTimeout( function(){window.location = goTo}, 350);
-			});
-
-			$('.category').click(function(){
-				$('.blah').css('dispay','none');
-			});
-
-		});
-	</script>
+	<link rel="stylesheet" href="static/css/bootstrap.css">
+	<link rel="stylesheet" href="static/css/common.css">
+	<link rel="stylesheet" href="static/css/common_default.css">
+	<script src="static/js/jquery-1.11.0.min.js"></script>
+	<script src="static/js/bootstrap.js"></script>
+	<script src="static/js/portfolio.js"></script>
 </head>
 <body>
-	<div class="container-fluid">
-		<div class="header">
-			<p><span class="badge">GM</span></p>
-			<h1>George Miranda</h1>
-			<h2 id="title">Web Developer</h2>
-		</div>
 
-		<h2 class="category">Projects</h2>
-		<div class="row">
-			<div class="col-md-4">
-				<a href="https://github.com/FunkyGeorge/foodtruck-group-project" class="pjlink"><img src="Assets/Trucks.png" alt="OOPS!" class="img-circle project"></a>
-				<div class="row">
-					<div class="col-md-6 col-md-offset-4">
-					<h4>Python</h4>
-					</div>
-				</div>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/portfolio">Portfolio</a>
 			</div>
-			<div class="col-md-4">
-				<a href="https://github.com/FunkyGeorge/Mass-label-print" class="pjlink"><img src="Assets/Image-01.png" alt="OOPS!" class="img-circle project"></a>
-				<div class="row">
-					<div class="col-md-6 col-md-offset-5">
-					<h4>C#</h4>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<a href="Assets/Pacman/Single Player/index.html" class="pjlink"><img src="Assets/Pacman.png" alt="OOPS!" class="img-circle project"></a>
-				<div class="row">
-					<div class="col-md-6 col-md-offset-4">
-					<h4>Javascript</h4>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-3 col-md-offset-2">
-				<a href="https://github.com/FunkyGeorge/Multiple-label-print" class="pjlink"><img src="Assets/Image-02.png" alt="OOPS!" class="img-circle project"></a>
-				<div class="row">
-					<div class="col-md-6 col-md-offset-5">
-					<h4>C#</h4>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3 col-md-offset-1">
-				<a href="#" class="pjlink"><img src="http://businessthinker.com/wp-content/uploads/2010/02/Growth-management1.jpg" alt="OOPS!" class="img-circle project"></a>
-			</div>
-		</div>
-		
-		
 
-		<div class="footer">
-		<ul>
-			<h3>Check Me Out At</h3>
-			<li class="link"><a href="http://stackoverflow.com/users/5701182/george-miranda"><img src="http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png">Stack Overflow</a></li>
-			<li class="link"><a href="https://www.linkedin.com/in/george-miranda-462a47114">
-			<img src="http://icons.iconarchive.com/icons/limav/flat-gradient-social/512/Linkedin-icon.png">LinkedIn</a></li>
-			<li class="link"><a href="https://github.com/FunkyGeorge"><img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png">GitHub</a></li>
-			<li class="link"><a href="AboutMe.html"><img src="Assets/AboutMe.png" >About Me</a></li>
-		</ul>
-	</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="/index_default.html">Default Template</a></li>
+				<li>
+					<a href="https://github.com/FunkyGeorge" target="_blank">
+						<span class="git-icon"></span>&nbsp;Check the codes in Github
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	
+	<div id="wrapper" class="container">
+		<div id="student_description">
+			<div class="media-group">
+				<div class="media">
+					<img src="static/img/portrait.jpg" alt="" class="img-responsive img-thumbnail media-object pull-left">
+					<div class="media-body">
+						<h1 class="media-heading">George Miranda</h1>
+						<p>George is a tech enthusiast that is always interested in learning the new and hottest technologies. Growing up in a small town he started his tech career going to a community college, then moving on from college to get more practical experience. The time he spends around tech experts only increases his desire to create great things with his ever increasing knowledge.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="portfolio_content">
+			<ul id="portfolio_tab" class="nav nav-tabs">
+				<li class="active"><a href="#mean" data-toggle="tab">Node and Javascript</a></li>
+				<li><a href="#ruby_rails" data-toggle="tab">iOS</a></li>
+				<li><a href="#node_javascript" data-toggle="tab">Python and MVC</a></li>
+				<li><a href="#dotNET" data-toggle="tab">.NET</a></li>
+			</ul>
+			<!-- Mean stack panel -->
+			<div id="portfolio_body" class="tab-content panel panel-default">
+				<div class="panel-body tab-pane active" id="mean">
+					<div class="project_list list-group">
+						<a href="http://froxxi.com" class="project_link list-group-item" data-description="An online app where you could explore and create fashion trends in a similar style as Pinterest does with crafts. This project was created and deployed in a 4 day time frame with a team of 4 developers. It is used to find fashion or post photos expressing your own fashion and then tagging them with links to a website where you can show off where you can get the same look." data-title="Froxxi" data-technologies="HTML/CSS, NodeJS, Javascript, MongoDB, Angular, Express.io, JQuery and Shopstyle API">
+							<img src="static/img/froxxi.png" class="center-block img-thumbnail">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">Froxxi</h5>
+						</a>
+						<a href="assets/Pacman/Single_Player/index.html" class="project_link list-group-item" data-description="Is an attempt to recreate the popular game using pure HTML and JS. You can click on the window below and start playing with your arrow keys. Logic for the ghosts where also coded in pure javascript." data-title="Pacman" data-technologies="HTML/CSS and Javascript.">
+							<img src="static/img/Pacman.png" class="center-block img-thumbnail">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">Pacman</h5>
+						</a>
+					</div>
+					<div class="preview_pane_container">
+						<h4></h4>
+						<p class="project_description"></p>
+						<p class="technologies_used"></p>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="preview_pane"></div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<!-- Python panel -->
+				<div class="panel-body tab-pane" id="node_javascript">
+					<div class="project_list list-group">
+						<a href="http://foodtrucks.zaks.pw/" class="project_link list-group-item" data-description="This application was made for a 1 week coding competition. It was created in a team of 2 and it was a winning submission. It lets you locate food trucks in San Francisco according to location and time.  It also utilizes the twilio API to send out text message reminders when a food truck is near. Data is from data.gov and plotted on Google Maps API" data-title="Dude, where's my truck" data-technologies="HTML/CSS, Flask, Pylot, Javascripts, jQuery, AJAX, Twilio API, Google Maps API and MySQL.">
+							<img src="static/img/Trucks.png" class="center-block img-thumbnail">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">Food Truck Finder</h5>
+						</a>
+					</div>
+					
+					<div class="preview_pane_container">
+						<h4></h4>
+						<p class="project_description"></p>
+						<p class="technologies_used"></p>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="preview_pane"></div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+
+				<!-- iOS panel -->
+				<div class="panel-body tab-pane" id="ruby_rails">
+					<div class="project_list list-group">
+						<a href="assets/Codedex_demo/index.html" class="project_link list-group-item" data-description="With this app you can take pictures of people you know to save them in personal storage. Then you can later take a picture of them again and recall notes you set for that person. This uses facial recognition technology and was build in 24 hours." data-title="Codedex" data-technologies="Swift, iOS 9 framework, NodeJS, MongoDB, Express.io and Kairos API">
+							<img src="static/img/home.jpg" class="center-block img-thumbnail">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">Facial Recognition</h5>
+						</a>
+						<a href="assets/GoTasks_demo/index.html" class="project_link list-group-item" data-description="A mini app that lets you place markers on the map of your local area. You could use the map markers and a to-do list and use it to keep track of your specific notes you left for that location." data-title="GoTasks" data-technologies="Swift, iOS 9 framework, table views and map kit">
+							<img src="static/img/home.jpg" class="center-block img-thumbnail">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">GoTasks</h5>
+						</a>
+						<a href="assets/TiltASketch_demo/index.html" class="project_link list-group-item" data-description="An app where you could draw terrible pictures using the core motion data from you iOS device. You have the option to change the color of the drawing, pause the drawing, shake the device to wipe the canvas and also draw with your finger as an alternative. Created with 48 hours work." data-title="Tilt-a-Sketch" data-technologies="Swift, iOS 9 framework and CoreMotion kit">
+							<img src="static/img/Tilt_a_Sketch.jpg" class="center-block img-thumbnail">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">Tilt-a-Sketch</h5>
+						</a>
+					</div>
+					<div class="preview_pane_container">
+						<h4></h4>
+						<p class="project_description"></p>
+						<p class="technologies_used"></p>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="preview_pane"></div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+
+				<!-- .NET -->
+				<div class="panel-body tab-pane" id="dotNET">
+					<div class="project_list list-group">
+						<a href="static/img/dotNET.png" class="project_link list-group-item" data-description="This was a local program created to speed up the process of generating labels required for a past job. Up to 4 different labels were required for certain products and before this program, they were all created manually. I automated the process and this program saved a huge amount of time for my team. It output labels from a serial port connected printer." data-title="Label generating program" data-technologies="C#, .NET 4.5 framework, SQL stored procedures and MS Server 2012">
+							<img src="static/img/dotNET.png" class="center-block img-thumbnail">
+							<div class="clearfix"></div>
+							<h5 class="list-group-item-heading text-center">Label generating program</h5>
+						</a>
+					</div>
+					<div class="preview_pane_container">
+						<h4></h4>
+						<p class="project_description"></p>
+						<p class="technologies_used"></p>
+						<div class="panel panel-default">
+							<div class="panel-body">
+								<div class="preview_pane"></div>
+							</div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

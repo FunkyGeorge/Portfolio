@@ -1,2 +1,0 @@
-# FunkyGeorge.github.io
-Portfolio
