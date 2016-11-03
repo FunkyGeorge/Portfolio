@@ -76,5 +76,12 @@ body{
     height: 11px;
     width: 12px;
 }
+.linkedIn-icon{
+    background: url('../img/linkedIcon.png');
+    background-size: cover;
+    display: inline-block;
+    height: 11px;
+    width: 12px;
+}
 
 
