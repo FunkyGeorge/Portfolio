@@ -3,13 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<title>George's Portfolio</title>
-	<link rel="stylesheet" href="static/css/bootstrap.css">
-	<link rel="stylesheet" href="static/css/common.css">
-	<link rel="stylesheet" href="static/css/common_default.css">
+
 	<link rel="icon" href="static/img/favicon.ico"/>
-	<script src="static/js/jquery-1.11.0.min.js"></script>
-	<script src="static/js/bootstrap.js"></script>
-	<script src="static/js/portfolio.js"></script>
+	<link type="text/css" rel="stylesheet" href="static/css/materialize.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script type="text/javascript" src="static/js/materialize.js"></script>
+	<script src="./static/js/main.js"></script>
 
 	<!-- SEO -->
 	<meta property="og:title" content="George Miranda's Online Portfolio"/>
@@ -29,160 +28,313 @@
 	<!-- .ico files for icons -->
 	<link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon"/>
 	<link rel="apple-touch-icon" href="static/img/favicon.ico" type="image/x-icon"/>
+
+	<link rel="stylesheet" href="static/css/main.css">
 </head>
 <body>
+	<div class="container">
+		<h1 class="center-align">George Miranda</h1>
+		<h4 class="center-align" style="color: lightgrey"><em>Full Stack Web Developer</em></h4>
 
-	<nav class="navbar navbar-default" role="navigation">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="">Portfolio</a>
-			</div>
-
-			<ul class="nav navbar-nav">
-				<li>
-					<a href="https://github.com/FunkyGeorge" target="_blank">
-						<span class="git-icon"></span>&nbsp;Check the codes in Github
-					</a>
-				</li>
-				<li>
-					<a href="https://www.linkedin.com/in/george-miranda-462a47114" target="_blank">
-						<span class="linkedIn-icon"></span>&nbsp;LinkedIn profile
-					</a>
-				</li>
-			</ul>
+		<div class="center-align">
+			<img class="circle-image z-depth-3" src="./static/img/portrait.jpg" width="30%" height="auto" alt="">
 		</div>
-	</nav>
 
-	<div id="wrapper" class="container">
-		<div id="student_description">
-			<div class="media-group">
-				<div class="media">
-					<img src="static/img/portrait.jpg" alt="" class="img-responsive img-thumbnail media-object pull-left">
-					<div class="media-body">
-						<h1 class="media-heading">George Miranda</h1>
-						<p>George is a tech enthusiast that is always interested in learning the new and hottest technologies. Growing up in a small town he started his tech career going to a community college, then moved on from college to get more practical experience. The time he spends around tech experts only increases his desire to create great things with his ever increasing knowledge.</p>
-						<p>Email: george92miranda@gmail.com</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="portfolio_content">
-			<ul id="portfolio_tab" class="nav nav-tabs">
-				<li class="active"><a href="#mean" data-toggle="tab">Node and Javascript</a></li>
-				<li><a href="#ruby_rails" data-toggle="tab">iOS</a></li>
-				<li><a href="#node_javascript" data-toggle="tab">Python and MVC</a></li>
-				<li><a href="#dotNET" data-toggle="tab">.NET</a></li>
-			</ul>
-			<!-- Mean stack panel -->
-			<div id="portfolio_body" class="tab-content panel panel-default">
-				<div class="panel-body tab-pane active" id="mean">
-					<div class="project_list list-group">
-						<a href="static/img/froxxi.png" class="project_link list-group-item" data-description="An online app where you could explore and create fashion trends in a similar style as Pinterest does with crafts. This project was created and deployed in a 4 day time frame with a team of 4 developers. It is used to find fashion or post photos expressing your own fashion and then tagging them with links to a website where you can show off where you can get the same look." data-title="<a href='http://froxxi.com' target='_blank'>Froxxi</a>" data-technologies="HTML/CSS, NodeJS, Javascript, MongoDB, Angular, Express.io, JQuery and Shopstyle API">
-							<img src="static/img/favicon.jpg" class="center-block img-thumbnail">
-							<div class="clearfix"></div>
-							<h5 class="list-group-item-heading text-center">Froxxi</h5>
-						</a>
-						<a href="assets/Pacman/Single_Player/index.html" class="project_link list-group-item" data-description="Is an attempt to recreate the popular game using pure HTML and JS. You can click on the window below and start playing with your arrow keys. Logic for the ghosts where also coded in pure javascript." data-title="Pacman" data-technologies="HTML/CSS and Javascript.">
-							<img src="static/img/Pacman.png" class="center-block img-thumbnail">
-							<div class="clearfix"></div>
-							<h5 class="list-group-item-heading text-center">Pacman</h5>
-						</a>
-						<a href="static/img/ronin.png" class="project_link list-group-item" data-description="A website built for my team of expert developers. Ronin Dev is the name of the group." data-title="<a href='http://ronin.world' target='_blank'>Ronin Dev</a>" data-technologies="HTML/CSS, Javascript, jQuery, Materialize">
-							<img src="static/img/ronin_logo.jpg" class="center-block img-thumbnail">
-							<div class="clearfix"></div>
-							<h5 class="list-group-item-heading text-center">Ronin Dev</h5>
-						</a>
-					</div>
-					<div class="preview_pane_container">
-						<h4></h4>
-						<p class="project_description"></p>
-						<p class="technologies_used"></p>
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<div class="preview_pane"></div>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<!-- Python panel -->
-				<div class="panel-body tab-pane" id="node_javascript">
-					<div class="project_list list-group">
-						<a href="static/img/Trucks.png" class="project_link list-group-item" data-description="This application was made for a 1 week coding competition. It was created in a team of 2 and it was a winning submission. It lets you locate food trucks in San Francisco according to location and time.  It also utilizes the twilio API to send out text message reminders when a food truck is near. Data is from data.gov and plotted on Google Maps API.  foodtrucks.zaks.pw" data-title="<a href='http://foodtrucks.zaks.pw/' target='_blank'>Dude, where's my truck</a>" data-technologies="HTML/CSS, Flask, Pylot, Javascripts, jQuery, AJAX, Twilio API, Google Maps API and MySQL.">
-							<img src="static/img/Trucks.png" class="center-block img-thumbnail">
-							<div class="clearfix"></div>
-							<h5 class="list-group-item-heading text-center">Food Truck Finder</h5>
-						</a>
-					</div>
+		<p class="flow-text center-align">
+			A full stack developer is one who is skilled in all the technologies that make up an application,
+			from start to finish.  That is exactly what describes me.  I have experience ranging from creating desktop apps,
+			to elaborate web applications, then back down to designing simple static web pages.  I believe I have an
+			innovative mind with critical thinking skills that allow me to create beautiful and efficient applications
+		</p>
 
-					<div class="preview_pane_container">
-						<h4></h4>
-						<p class="project_description"></p>
-						<p class="technologies_used"></p>
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<div class="preview_pane"></div>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix"></div>
+		<div class="spacer"></div>
+	</div>
+	<div class="white-background z-depth-3">
+		<div class="container">
+			<h2 class="center-align header">Specialties</h2>
+			<div class="row center-align">
+				<div class="col m4">
+					<img class="responsive-img" src="./static/img/MEANimage.png" alt="MEAN" width="100%" height="auto">
+					<h4>MEAN Stack</h4>
+					<p>
+						I have been using the MEAN stack in my most recent projects.
+						Just check out Froxxi, Evergreen and GDND in my showcase.  Although
+						I am skilled with Nodejs in the back-end and using RESTful routes, I spend
+						most of my time in the front-end with Angularjs.  My focus is always on
+						UX by making sure the front end operates efficiently, with no hiccups.
+					</p>
 				</div>
-
-				<!-- iOS panel -->
-				<div class="panel-body tab-pane" id="ruby_rails">
-					<div class="project_list list-group">
-						<a href="assets/Codedex_demo/index.html" class="project_link list-group-item" data-description="With this app you can take pictures of people you know to save them in personal storage. Then you can later take a picture of them again and recall notes you set for that person. This uses facial recognition technology and was build in 24 hours." data-title="Codedex" data-technologies="Swift, iOS 9 framework, NodeJS, MongoDB, Express.io and Kairos API">
-							<img src="static/img/start.jpg" class="center-block img-thumbnail">
-							<div class="clearfix"></div>
-							<h5 class="list-group-item-heading text-center">Facial Recognition</h5>
-						</a>
-						<a href="assets/GoTasks_demo/index.html" class="project_link list-group-item" data-description="A mini app that lets you place markers on the map of your local area. You could use the map markers and a to-do list and use it to keep track of your specific notes you left for that location." data-title="GoTasks" data-technologies="Swift, iOS 9 framework, table views and map kit">
-							<img src="static/img/home.jpg" class="center-block img-thumbnail">
-							<div class="clearfix"></div>
-							<h5 class="list-group-item-heading text-center">GoTasks</h5>
-						</a>
-						<a href="assets/TiltASketch_demo/index.html" class="project_link list-group-item" data-description="An app where you could draw terrible pictures using the core motion data from you iOS device. You have the option to change the color of the drawing, pause the drawing, shake the device to wipe the canvas and also draw with your finger as an alternative. Created with 48 hours work." data-title="Tilt-a-Sketch" data-technologies="Swift, iOS 9 framework and CoreMotion kit">
-							<img src="static/img/Tilt_a_Sketch.jpg" class="center-block img-thumbnail">
-							<div class="clearfix"></div>
-							<h5 class="list-group-item-heading text-center">Tilt-a-Sketch</h5>
-						</a>
-					</div>
-					<div class="preview_pane_container">
-						<h4></h4>
-						<p class="project_description"></p>
-						<p class="technologies_used"></p>
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<div class="preview_pane"></div>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix"></div>
+				<div class="col m4">
+					<img class="responsive-img" src="./static/img/DBimage.png" alt="Databases" width="32%" height="auto">
+					<h4>Databases</h4>
+					<p>
+						Since the beginning of my career in tech, I have been working with
+						databases.  It started with using MS SQL Server, which gave me a solid
+						foundation to learn even deeper skills in SQL.  My knowledge carried
+						over into MySQL where I am now creating procedures, views, functions
+						and advanced for my teams.
+					</p>
 				</div>
-
-				<!-- .NET -->
-				<div class="panel-body tab-pane" id="dotNET">
-					<div class="project_list list-group">
-						<a href="static/img/dotNET.png" class="project_link list-group-item" data-description="This was a local program created to speed up the process of generating labels required for a past job. Up to 4 different labels were required for certain products and before this program, they were all created manually. I automated the process and this program saved a huge amount of time for my team. It output labels from a serial port connected printer." data-title="Label generating program" data-technologies="C#, .NET 4.5 framework, SQL stored procedures and MS Server 2012">
-							<img src="static/img/dotNET.png" class="center-block img-thumbnail">
-							<div class="clearfix"></div>
-							<h5 class="list-group-item-heading text-center">Label generating program</h5>
-						</a>
-					</div>
-					<div class="preview_pane_container">
-						<h4></h4>
-						<p class="project_description"></p>
-						<p class="technologies_used"></p>
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<div class="preview_pane"></div>
-							</div>
-						</div>
-					</div>
-					<div class="clearfix"></div>
+				<div class="col m4">
+					<img class="responsive-img" src="./static/img/AWSimage.png" alt="Dev Ops" width="80%" height="auto">
+					<h4>Deployment</h4>
+					<p>
+						Although this is the newest skill to me, I love it very much.
+						I have deployed many applications to Amazon Web Services for both
+						myself as well as my teams now.  I have become comfortable with deploying
+						applications on my own and even solo debugging issues that sometimes only
+						appear once the are up in the cloud.
+					</p>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	<!-- Showcase Portion -->
+	<div class="spacer"></div>
+	<div class="container">
+		<h2 class="center-align header">Portfolio</h2>
+	</div>
+	<div class="nav-content center-align">
+		<ul class="tabs tabs-transparent">
+			<li class="tab"><a target="" class="active" href="#Evergreen">Evergreen</a></li>
+			<li class="tab"><a href="#Ronin">Ronin Dev Website</a></li>
+			<li class="tab"><a href="#GDND">GDND</a></li>
+			<li class="tab"><a href="#Trucks">Foodtrucks</a></li>
+			<li class="tab activateCarousel"><a href="#test4">Misc</a></li>
+		</ul>
+	</div>
+	<div class="spacer"></div>
+
+	<div id="Evergreen" class="col s12">
+		<div class="row">
+			<div class="col m3 lift z-depth-5">
+				<h5 class="center-align">Evergreen</h5>
+				<hr>
+				<p>
+					Evergreen is a platform that connects Makers and suppliers to each other.
+					Along with being a marketplace for one another, Evergreen provides analytics
+					so that makers and suppliers can make the best decision for who is best for the job.
+				</p>
+				<p>
+					This project was created in a four person team over 4 months using Angular front-end,
+					Node back-end, and a MySQL database. My biggest roles where creating the front-end Angular
+					flow and setting up formulas to be used in MySQL and deployment.
+				</p>
+				<a target="_blank" class="center-align" href="http://evergreenmake.com">evergreenmake.com</a>
+			</div>
+			<div class="col m9" style="height: 100%">
+				<iframe class="preview" src="http://evergreenmake.com" width="100%" height="auto"></iframe>
+			</div>
+		</div>
+	</div>
+	<div id="Ronin" class="col s12">
+		<div class="row">
+			<div class="col m3 lift z-depth-5">
+				<h5 class="center-align">Ronin Dev Website</h5>
+				<hr>
+				<p>
+					Ronin Dev is a web development team for hire. Ronin is composed of 4 full stack developers,
+					including George. They can build out your idea to make it become a reality.
+				</p>
+				<p>
+					This website was built out by me, for my development team. I used Materialize and jQuery to build it out.
+				</p>
+				<a target="_blank" class="center-align" href="http://ronin.world">Ronin Dev Website</a>
+			</div>
+			<div class="col m9" style="height: 100%">
+				<iframe class="preview" src="http://ronin.world" width="100%" height="auto"></iframe>
+			</div>
+		</div>
+	</div>
+	<div id="GDND" class="col s12">
+		<div class="row">
+			<div class="col m3 lift z-depth-5">
+				<h5 class="center-align">GDND</h5>
+				<hr>
+				<p>
+					GDND is a platform where contractors and suppliers could connect for dirt services. Truckers would be able to
+					find contract work for picking up or dropping off dirt. While contractors would be able to find truckers if they
+					needed dirt removed from their site.
+				</p>
+				<p>
+					This app was built out over the course of a month and a half with a four man development team using Angular, Nodejs and MySQL.
+					My role in this site was creating some custom dynamic styling for the page, pluggin in location services and deployment.
+				</p>
+				<a target="_blank" class="center-align" href="http://54.193.70.101">GDND Site</a>
+			</div>
+			<div class="col m9" style="height: 100%">
+				<iframe class="preview" src="http://54.193.70.101" width="100%" height="auto"></iframe>
+			</div>
+		</div>
+	</div>
+	<div id="Trucks" class="col s12">
+		<div class="row">
+			<div class="col m3 lift z-depth-5">
+				<h5 class="center-align">Foodtrucks</h5>
+				<hr>
+				<p>
+					Foodtrucks is a webpage where, if you are in the San Fransisco area, you can find mobile foodtrucks based on time
+					and day. You can create an account, leave ratings and even have it text you reminders for the trucks.
+				</p>
+				<p>
+					This was a school project that was given a 4 day work period.  Myself and one other classmate build this up in those four days
+					using Python and MySQL. My role in this project was structuring the database as well as serve the front-end data from its
+					RESTful routes, as well as deployment.
+				</p>
+				<a target="_blank" class="center-align" href="http://foodtrucks.zaks.pw">Foodtrucks Site</a>
+			</div>
+			<div class="col m9" style="height: 100%">
+				<iframe class="preview" src="http://foodtrucks.zaks.pw" width="100%" height="auto"></iframe>
+			</div>
+		</div>
+	</div>
+	<div id="test4" class="col s12">
+		<div class="row">
+			<div class="col m3 lift z-depth-5">
+				<h5 class="center-align">More to come...</h5>
+				<hr>
+				<p>
+					I see that you have clicked this far, thank you for your interest. I am always working on new projects and I will post them
+					when I finish them.
+				</p>
+				<p>
+					I am proud of my work so if you would like to see what I did to complete them just click the link to my github profile below.
+				</p>
+				<a target="_blank" class="center-align" href="https://github.com/FunkyGeorge?tab=repositories">Link to github</a>
+			</div>
+			<div class="col m9" style="height: 100%">
+				<div class="carousel">
+					<a class="carousel-item" href="#one!"><img src="./static/img/favicon.jpg"></a>
+					<a class="carousel-item" href="#two!"><img src="./static/img/Group2x.png"></a>
+					<a class="carousel-item" href="#three!"><img src="./static/img/logo_transparent_background.png" height="100%" width="auto"></a>
+					<a class="carousel-item" href="#four!"><img src="./static/img/uVu.png"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="spacer"></div>
+
+	<!-- About portion -->
+	<div class="container">
+		<div class="row">
+			<div class="col m12">
+				<h2 class="center-align header">About George</h2>
+
+				<!-- Photos -->
+				<div class="center-align">
+					<img id="Under-left" class="rounded-image z-depth-1" src="./static/img/george_resized.png" alt="">
+					<img id="Overlap-image" class="rounded-image z-depth-4" src="./static/img/git_thinker.jpg" alt="">
+					<img id="Under-right" class="rounded-image z-depth-1" src="./static/img/snowboarding.jpg" alt="">
+					<div class="spacer"></div>
+					<div class="spacer"></div>
+				</div>
+
+			</div>
+		</div>
+		<div class="row">
+			<div class="col m7">
+
+				<h3 class="center-align">Experience</h3>
+				<p class="flow-text">
+					Almost all my life, I grew up in Patterson where I used to drive to my first job in 30 minutes and
+					drive to college in 40. I went to school for computer science, but I was unhappy about the pace I was learning.
+					Instead of continuing with academics I decided to find a job where I could utilize what I picked up and start
+					gaining practical experience. Although my first job in tech consisted of coding in C# and using databases, I
+					always wanted more from my career.
+				</p>
+				<p class="flow-text">
+					After working in a basic tech job for a year, I wanted to make another jump and further my career.  I went back
+					to school at Coding Dojo, a coding bootcamp.  While there, I was able to learn with the satisfaction of building
+					things.  I now work in a group with three other developers doing freelance work.
+				</p>
+
+				<div class="spacer"></div>
+
+				<h3 class="center-align">Hobbies</h3>
+				<p class="flow-text">
+					Almost anything tech related will geek me out. Coding, video games, hardware, smart devices and connected home appliances
+					are all things that interest me. Otherwise, I wouldn't be able to spend most days and nights in front of a monitor. However,
+					when I get the chance I also like to go paintballing during the summer, snowboarding during the winter and playing the guitar
+					when I am stuck at home.
+				</p>
+			</div>
+			<div class="col m4 offset-m1">
+				<h3 class="center-align header">Additional Skills</h3>
+				<div class="row center-align">
+					<div class="col m12">
+						<h4>Front-End</h4>
+						<ul>
+							<li>Angularjs</li>
+							<li>Javascript</li>
+							<li>Bootstrap</li>
+							<li>Materialize</li>
+							<li>HTML</li>
+							<li>CSS</li>
+						</ul>
+					</div>
+					<div class="col m12">
+						<h4>Back-End</h4>
+						<ul>
+							<li>Nodejs</li>
+							<li>AWS/EC2 Deployment</li>
+							<li>Javascript</li>
+							<li>Python</li>
+							<li>APIs</li>
+						</ul>
+					</div>
+					<div class="col m12">
+						<h4>Databases</h4>
+						<ul>
+							<li>MySQL Workbench</li>
+							<li>MySQL</li>
+							<li>MS SQL Server</li>
+							<li>MongoDB</li>
+						</ul>
+					</div>
+					<div class="col m12">
+						<h4>Native</h4>
+						<ul>
+							<li>iOS</li>
+							<li>Swift</li>
+							<li>React-Native</li>
+							<li>.NET Framework</li>
+							<li>C#</li>
+							<li>Java</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="spacer"></div>
+
+	</div>
+
+	<footer class="page-footer black">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+		        <ul id="Footer-icons">
+		          <li class="white-text follow-adjust">Follow Me &nbsp;</li>
+		          <li><a class="grey-text text-lighten-3" href="https://github.com/FunkyGeorge" target="_blank"><img class="icon" src="./static/img/39062.png"></a></li>
+							<li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/in/george-miranda-462a47114/" target="_blank"><img class="icon" src="./static/img/linkedin.png"></a></li>
+		          <li><a class="grey-text text-lighten-3" href="https://twitter.com/funky_George" target="_blank"><img class="icon" src="./static/img/twitter.png"></a></li>
+		          <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/georgeoffunk/" target="_blank"><img class="icon" src="./static/img/instagram.png"></a></li>
+		        </ul>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<h5 class="white-text">Links</h5>
+					<ul>
+						<li><a class="grey-text text-lighten-3" href="./Assets/Resume.doc" target="_blank">Resume</a></li>
+					</ul>
+					<div class="spacer"></div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+		</div>
+	</footer>
+
 </body>
 </html>
