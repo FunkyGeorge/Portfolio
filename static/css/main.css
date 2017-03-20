@@ -50,14 +50,14 @@ body {
 
 #Under-left {
   position: absolute;
-  left: 25em;
+  left: 20em;
   width: 25%;
   height: auto;
 }
 
 #Under-right {
   position: absolute;
-  right: 25em;
+  right: 20em;
   width: 25%;
   height: auto;
 }
