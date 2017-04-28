@@ -31,6 +31,26 @@
 	<link rel="apple-touch-icon" href="static/img/favicon.ico" type="image/x-icon"/>
 
 	<link rel="stylesheet" href="static/css/main.css">
+
+	<!--Facebook Analytics-->
+	<script>
+		window.fbAsyncInit = function() {
+			FB.init({
+			appId      : '1752851711398965',
+			xfbml      : true,
+			version    : 'v2.9'
+			});
+			FB.AppEvents.logPageView();
+		};
+
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 </head>
 <body>
 	<div class="container">
