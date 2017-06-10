@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/FunkyGeorge/FunkyGeorge.github.io#readme",
   "dependencies": {
-    "express": "^4.15.2"
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "mysql2": "^1.2.0"
   }
 }
